@@ -16,6 +16,12 @@ namespace Home_work_5._5
             FillArray(array);
             Console.WriteLine($"Количество четных чисел в массиве: [{String.Join(", ", array)}] -> {FindEvenNumber(array)}");
 
+            void FillArray(int[] arrayInFunction)
+            {
+                for (int i = 0; i < arrayInFunction.Length; i++)
+                    arrayInFunction[i] = new Random().Next(1, 1000);
+            }
+
             int FindEvenNumber(int[] arrayInFunction)
             {
                 int evenNumbers = 0;
@@ -25,11 +31,6 @@ namespace Home_work_5._5
                         evenNumbers += 1;
                 }
                 return (evenNumbers);
-            }
-            void FillArray(int[] arrayInFunction)
-            {
-                for (int i = 0; i < arrayInFunction.Length; i++)
-                    arrayInFunction[i] = new Random().Next(1, 1000);
             }
         }
     }
