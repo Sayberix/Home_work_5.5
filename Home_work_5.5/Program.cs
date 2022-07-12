@@ -6,32 +6,12 @@ namespace Home_work_5._5
     {
         private static void Main(string[] args)
         {
-            // Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами.
-            // Напишите программу, которая покажет количество чётных чисел в массиве.
-            // [345, 897, 568, 234] -> 2
+            // Задача 36: Задайте одномерный массив, заполненный случайными числами.
+            // Найдите сумму элементов, стоящих на нечётных позициях.
+            // [3, 7, 23, 12] -> 19
+            // [-4, -6, 89, 6]-> 0
 
-            Console.Write("Введите размерность массива: ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            int[] array = new int[n];
-            FillArray(array);
-            Console.WriteLine($"Количество четных чисел в массиве: [{String.Join(", ", array)}] -> {FindEvenNumber(array)}");
 
-            void FillArray(int[] arrayInFunction)
-            {
-                for (int i = 0; i < arrayInFunction.Length; i++)
-                    arrayInFunction[i] = new Random().Next(1, 1000);
-            }
-
-            int FindEvenNumber(int[] arrayInFunction)
-            {
-                int evenNumbers = 0;
-                for (int i = 0; i < arrayInFunction.Length; i++)
-                {
-                    if (arrayInFunction[i] % 2 == 0)
-                        evenNumbers += 1;
-                }
-                return (evenNumbers);
-            }
         }
     }
 }
