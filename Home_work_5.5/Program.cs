@@ -2,9 +2,9 @@
 
 namespace Home_work_5._5
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами.
             // Напишите программу, которая покажет количество чётных чисел в массиве.
@@ -14,10 +14,21 @@ namespace Home_work_5._5
             int n = Convert.ToInt32(Console.ReadLine());
             int[] array = new int[n];
             FillArray(array);
+            Console.WriteLine($"Количество четных чисел в массиве: [{String.Join(", ", array)}] -> {FindEvenNumber(array)}");
 
-            void FillArray(int [] arrayInFunction)
+            int FindEvenNumber(int[] arrayInFunction)
             {
-                for(int i = 0; i < arrayInFunction.Length; i++)
+                int evenNumbers = 0;
+                for (int i = 0; i < arrayInFunction.Length; i++)
+                {
+                    if (arrayInFunction[i] % 2 == 0)
+                        evenNumbers += 1;
+                }
+                return (evenNumbers);
+            }
+            void FillArray(int[] arrayInFunction)
+            {
+                for (int i = 0; i < arrayInFunction.Length; i++)
                     arrayInFunction[i] = new Random().Next(1, 1000);
             }
         }
