@@ -11,6 +11,18 @@ namespace Home_work_5._5
             // [3, 7, 23, 12] -> 19
             // [-4, -6, 89, 6]-> 0
 
+            Console.Write("Введите размерность массива: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[n];
+            FillArray(array);
+
+
+            void FillArray(int[] arrayInFunction)
+            {
+                for (int i = 0; i < arrayInFunction.Length; i++)
+                    arrayInFunction[i] = new Random().Next(1, 100);
+            }
+
 
         }
     }
