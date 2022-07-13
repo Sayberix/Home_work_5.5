@@ -18,7 +18,7 @@ namespace Home_work_5._5
             void FillArray(double[] arrayInFunction)
             {
                 for (int i = 0; i < arrayInFunction.Length; i++)
-                    arrayInFunction[i] = Math.Round(new Random().NextDouble() * 200 - 100, 2); // генератор ыещественных чисел от -100 до 100 с заданной точностью до двух знаков после запятой
+                    arrayInFunction[i] = Math.Round(new Random().NextDouble() * 200 - 100, 2); // генератор вещественных чисел от -100 до 100 с заданной точностью до двух знаков после запятой
             }
 
             double DiffMinMax(double[] arrayInFunction)
